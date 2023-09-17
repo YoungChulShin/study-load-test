@@ -61,3 +61,11 @@ CLI 모드
 
 ## 테스트에서 활용할 정보
 ### 입력 값을 랜덤으로 전달하기
+`Config Element` -> `Random Varaible`을 통해서 요청 과정에서 변경되는 랜덤 값을 설정할 수 있다. 
+
+여기서 설정한 `Variable Name` 값을 요청 정보에서 사용할 수 있다. 
+
+예를 들어서 'Variable Name'이 'randomName'이고 이 값을 PathVariable에서 사용한다면 아래와 같다. 
+```
+/api/greeting/hello/${randomName}
+```

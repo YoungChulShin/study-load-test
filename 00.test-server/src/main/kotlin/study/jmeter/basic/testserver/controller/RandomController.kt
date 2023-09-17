@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RestController
 import kotlin.random.Random
 
 @RestController
-class TestController {
+class RandomController {
 
-    @PostMapping("/test/local/random/max-500-millis")
+    @PostMapping("/api/random/delay/max-500-millis")
     fun testMax500Millis(): String {
         val delay = Random.nextLong(50, 500)
         Thread.sleep(delay)
@@ -16,7 +16,7 @@ class TestController {
         return message
     }
 
-    @PostMapping("/test/local/random/max-1000-millis")
+    @PostMapping("/api/random/delay/max-1000-millis")
     fun testMax1Seconds(): String {
         val delay = Random.nextLong(50, 1000)
         Thread.sleep(delay)
